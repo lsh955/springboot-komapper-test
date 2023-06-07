@@ -22,8 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-    val komapperVersion = "1.10.0"
-    platform("org.komapper:komapper-platform:$komapperVersion").let {
+    platform("org.komapper:komapper-platform:1.10.0").let {
         implementation(it)
         ksp(it)
     }
