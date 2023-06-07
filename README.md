@@ -13,7 +13,8 @@
     - user_address: 주소: String
     - user_update: 최근변경일자: DateTime
     - user_add: 최초등록일자: DateTime
-- 게시판 정보: board
+      <br><br>
+- 게시판 정보: Board
     - board_idx: 식별값(PK): Int
     - user_idx: 사용자 식별값(FK): Int
     - board_title: 제목: String
