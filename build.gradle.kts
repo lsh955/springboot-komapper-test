@@ -32,6 +32,7 @@ dependencies {
     ksp("org.komapper:komapper-processor")
 
     implementation("org.komapper:komapper-dialect-mysql-r2dbc:1.1.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
