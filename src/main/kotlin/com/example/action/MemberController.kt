@@ -2,13 +2,7 @@ package com.example.action
 
 import com.example.dto.MemberDto
 import com.example.service.MemberScrvice
-import org.springframework.web.bind.annotation.DeleteMapping
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PatchMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/member")
@@ -24,9 +18,7 @@ class MemberController(
     suspend fun list() = memberScrvice.lists()
 
     @PatchMapping("/update")
-    suspend fun update(): String {
-        return "update"
-    }
+    suspend fun update() = mapOf("mode" to true)
 
     @DeleteMapping("/delete")
     suspend fun delete(): String {
