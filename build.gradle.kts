@@ -39,6 +39,8 @@ dependencies {
     }
     ksp("org.komapper:komapper-processor")
 
+    implementation("org.modelmapper:modelmapper:3.1.0")
+
     implementation("org.komapper:komapper-starter-jdbc")
     implementation("org.komapper:komapper-dialect-h2-jdbc")
 
