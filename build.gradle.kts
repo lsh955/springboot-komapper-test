@@ -4,33 +4,23 @@ plugins {
     idea
     id("org.springframework.boot") version "2.7.1"
     id("io.spring.dependency-management") version "1.1.0"
-    id("com.google.devtools.ksp") version "1.6.21-1.0.5"
+    id("com.google.devtools.ksp") version "1.8.21-1.0.11"
 
     kotlin("jvm") version "1.8.21"
     kotlin("plugin.spring") version "1.8.21"
 }
 
 group = "com.example"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 java.sourceCompatibility = JavaVersion.VERSION_11
-java.targetCompatibility = JavaVersion.VERSION_11
+java.targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
 }
 
-idea {
-    module {
-        sourceDirs = sourceDirs + file("build/generated/ksp/main/kotlin")
-        testSourceDirs = testSourceDirs + file("build/generated/ksp/test/kotlin")
-        generatedSourceDirs =
-            generatedSourceDirs + file("build/generated/ksp/main/kotlin") + file("build/generated/ksp/test/kotlin")
-    }
-}
-
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     platform("org.komapper:komapper-platform:1.10.0").let {
@@ -40,9 +30,6 @@ dependencies {
     ksp("org.komapper:komapper-processor")
 
     implementation("org.modelmapper:modelmapper:3.1.0")
-
-    implementation("org.komapper:komapper-starter-jdbc")
-    implementation("org.komapper:komapper-dialect-h2-jdbc")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
@@ -56,7 +43,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
