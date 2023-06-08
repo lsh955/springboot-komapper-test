@@ -4,3 +4,7 @@ spring:
     name: dev
     username: dev
     password: 1234
+logging:
+  level:
+    root: info
+    org.komapper.Sql: debug
