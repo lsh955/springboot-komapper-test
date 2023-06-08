@@ -21,7 +21,7 @@ class MemberController(
     }
 
     @GetMapping("/list")
-    suspend fun list() = mapOf("mode" to true)
+    suspend fun list() = memberScrvice.lists()
 
     @PatchMapping("/update")
     suspend fun update(): String {
