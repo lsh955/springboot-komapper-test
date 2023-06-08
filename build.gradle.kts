@@ -44,8 +44,11 @@ dependencies {
     implementation("org.komapper:komapper-starter-jdbc")
     implementation("org.komapper:komapper-dialect-h2-jdbc")
 
-    implementation("org.komapper:komapper-dialect-mysql-r2dbc:1.1.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
+    implementation("org.komapper:komapper-spring-boot-autoconfigure-r2dbc:1.1.2")
+    implementation("org.komapper:komapper-spring-boot-starter-r2dbc:1.1.2")
+    implementation("org.komapper:komapper-dialect-mysql-r2dbc:1.1.2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
