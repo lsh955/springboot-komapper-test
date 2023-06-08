@@ -21,6 +21,8 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     platform("org.komapper:komapper-platform:1.10.0").let {
@@ -29,12 +31,10 @@ dependencies {
     }
     ksp("org.komapper:komapper-processor")
 
-    implementation("org.modelmapper:modelmapper:3.1.0")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-
     implementation("org.komapper:komapper-spring-boot-autoconfigure-r2dbc:1.1.2")
     implementation("org.komapper:komapper-spring-boot-starter-r2dbc:1.1.2")
+
+    implementation("org.modelmapper:modelmapper:3.1.0")
     implementation("org.komapper:komapper-dialect-mysql-r2dbc:1.1.2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
