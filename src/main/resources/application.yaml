@@ -1,0 +1,6 @@
+spring:
+  r2dbc:
+    url: ""
+    name: dev
+    username: dev
+    password: 1234
