@@ -1,13 +1,13 @@
 package com.example.dto
 
-import java.time.format.DateTimeFormatter
+import java.time.LocalDateTime
 
 data class MemberDto (
     var memberIdx: Long,
     var memberName: String,
     var memberAge: Int,
-    var memberNumber: Int,
+    var memberNumber: String,
     var memberAddress: String,
-    var memberUpdate: DateTimeFormatter,
-    var memberAdd: DateTimeFormatter
+    var memberUpdate: LocalDateTime,
+    var memberAdd: LocalDateTime
 )
