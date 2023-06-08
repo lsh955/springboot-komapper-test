@@ -10,18 +10,14 @@ class MemberController(
     private val memberScrvice: MemberScrvice
 ) {
     @PostMapping("/save")
-    suspend fun save(@RequestBody event:MemberDto): String {
-        return "save"
-    }
+    suspend fun save(@RequestBody event:MemberDto) = mapOf("mode" to "save")
 
     @GetMapping("/list")
     suspend fun list() = memberScrvice.lists()
 
     @PatchMapping("/update")
-    suspend fun update() = mapOf("mode" to true)
+    suspend fun update() = mapOf("mode" to "update")
 
     @DeleteMapping("/delete")
-    suspend fun delete(): String {
-        return "delete"
-    }
+    suspend fun delete() = mapOf("mode" to "delete")
 }
