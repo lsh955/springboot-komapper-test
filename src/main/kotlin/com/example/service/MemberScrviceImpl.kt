@@ -16,6 +16,7 @@ class MemberScrviceImpl (
 
     private val memberMeta = Meta.member
 
+    // 회원 저장.
     override suspend fun save(event: MemberDto): Boolean {
 
         return database.runQuery {
@@ -23,7 +24,7 @@ class MemberScrviceImpl (
         } > 0
     }
 
-    // 회원전체 불러오기.
+    // 회원 불러오기.
     override suspend fun lists(): List<MemberDto> {
 
         return database.runQuery {
