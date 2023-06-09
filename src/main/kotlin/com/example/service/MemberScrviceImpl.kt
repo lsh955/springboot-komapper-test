@@ -25,10 +25,10 @@ class MemberScrviceImpl (
     }
 
     // 회원정보 불러오기.
-    override suspend fun lists(): List<MemberDto> {
+    override suspend fun lists(offset: Int, limit: Int): List<MemberDto> {
 
         return database.runQuery {
-            QueryDsl.from(memberMeta)
+            QueryDsl.from(memberMeta).offset(offset).limit(limit)
         }
     }
 

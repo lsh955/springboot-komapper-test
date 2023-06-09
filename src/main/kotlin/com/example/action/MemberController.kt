@@ -13,7 +13,7 @@ class MemberController(
     suspend fun save(@RequestBody memberDto: MemberDto)= mapOf("state" to memberScrvice.save(memberDto))
 
     @GetMapping("/list")
-    suspend fun list() = memberScrvice.lists()
+    suspend fun list(@RequestParam offset: Int, @RequestParam limit: Int) = memberScrvice.lists(offset, limit)
 
     @PutMapping("/update")
     suspend fun update(@RequestBody memberDto: MemberDto) = memberScrvice.update(memberDto)
