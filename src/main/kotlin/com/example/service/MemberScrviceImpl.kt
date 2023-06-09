@@ -27,8 +27,6 @@ class MemberScrviceImpl (
 
         return database.runQuery {
             QueryDsl.from(memberMeta)
-        }.map {
-            modelMapper.map(it, MemberDto::class.java)
         }
     }
 
