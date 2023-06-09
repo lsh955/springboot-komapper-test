@@ -16,7 +16,7 @@ class MemberController(
     suspend fun list() = memberScrvice.lists()
 
     @PatchMapping("/update")
-    suspend fun update() = mapOf("mode" to "update")
+    suspend fun update(@RequestBody memberDto: MemberDto) = memberScrvice.update(memberDto)
 
     @DeleteMapping("/delete")
     suspend fun delete() = mapOf("mode" to "delete")

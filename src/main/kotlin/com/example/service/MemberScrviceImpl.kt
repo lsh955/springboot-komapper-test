@@ -34,8 +34,19 @@ class MemberScrviceImpl (
         }
     }
 
+    // 회원정보 변경.
     override suspend fun update(event: MemberDto): Boolean {
-        TODO("Not yet implemented")
+
+        return database.runQuery {
+            QueryDsl.update(memberMeta).set {
+                memberMeta.memberName eq event.memberName
+                memberMeta.memberAge eq event.memberAge
+                memberMeta.memberNumber eq event.memberNumber
+                memberMeta.memberAddress eq event.memberAddress
+            }.where {
+                memberMeta.memberIdx eq event.memberIdx
+            }
+        } > 0
     }
 
     override suspend fun delete(event: MemberDto): Boolean {
