@@ -1,0 +1,43 @@
+### 회원조회.
+GET http://127.0.0.1:8080/member/list?offset=0&limit=20
+
+### 회원저장.
+POST http://127.0.0.1:8080/member/save
+content-type: application/json
+
+{
+    "memberName": "테스트_02",
+    "memberAge": 30,
+    "memberNumber": "010-5414-8711",
+    "memberAddress": "광주광역 남구",
+    "memberUpdate": "2023-06-10 14:12",
+    "memberAdd": "2023-06-09 13:12"
+}
+
+### 회원수정.
+PUT http://127.0.0.1:8080/member/update
+Content-Type: application/json
+
+{
+    "memberIdx": 5,
+    "memberName": "테스트_05",
+    "memberAge": 35,
+    "memberNumber": "010-0000-1111",
+    "memberAddress": "광주광역시 북구",
+    "memberUpdate": "2023-06-10 14:12",
+    "memberAdd": "2023-06-09 13:12"
+}
+
+### 회원삭제.
+DELETE http://127.0.0.1:8080/member/delete
+Content-Type: application/json
+
+ {
+    "memberIdx": 8,
+    "memberName": "테스트_02",
+    "memberAge": 30,
+    "memberNumber": "010-5414-8711",
+    "memberAddress": "광주광역 남구",
+    "memberUpdate": "2023-06-10 14:12",
+    "memberAdd": "2023-06-09 13:12"
+  }
