@@ -1,5 +1,7 @@
 package com.example.dto
 
+import com.fasterxml.jackson.annotation.JsonFormat
+import org.springframework.format.annotation.DateTimeFormat
 import java.time.LocalDateTime
 
 data class MemberDto (
