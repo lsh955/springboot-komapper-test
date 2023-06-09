@@ -20,9 +20,7 @@ class MemberScrviceImpl (
         TODO("Not yet implemented")
     }
 
-    /**
-     * 전체 불러오기.
-     */
+    // 회원전체 불러오기.
     override suspend fun lists(): List<MemberDto> {
 
         return database.runQuery {
