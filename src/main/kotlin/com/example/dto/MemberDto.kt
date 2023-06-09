@@ -10,6 +10,8 @@ data class MemberDto (
     var memberAge: Int,
     var memberNumber: String,
     var memberAddress: String,
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm") @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     var memberUpdate: LocalDateTime,
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm") @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     var memberAdd: LocalDateTime
 )
