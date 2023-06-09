@@ -5,13 +5,11 @@ import com.example.entity.member
 import org.komapper.core.dsl.Meta
 import org.komapper.core.dsl.QueryDsl
 import org.komapper.r2dbc.R2dbcDatabase
-import org.modelmapper.ModelMapper
 import org.springframework.stereotype.Service
 
 @Service
 class MemberScrviceImpl (
-    private val database: R2dbcDatabase,
-    private val modelMapper: ModelMapper,
+    private val database: R2dbcDatabase
 ): MemberScrvice {
 
     private val memberMeta = Meta.member
