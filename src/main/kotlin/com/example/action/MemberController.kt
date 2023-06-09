@@ -10,7 +10,7 @@ class MemberController(
     private val memberScrvice: MemberScrvice
 ) {
     @PostMapping("/save")
-    suspend fun save(@RequestBody event:MemberDto) = hashMapOf("state" to memberScrvice.save(event))
+    suspend fun save(@RequestBody event:MemberDto) = mapOf("state" to memberScrvice.save(event))
 
     @GetMapping("/list")
     suspend fun list() = memberScrvice.lists()
