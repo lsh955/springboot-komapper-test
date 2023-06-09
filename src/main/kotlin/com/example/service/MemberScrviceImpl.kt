@@ -17,7 +17,10 @@ class MemberScrviceImpl (
     private val memberMeta = Meta.member
 
     override suspend fun save(event: MemberDto): Boolean {
-        TODO("Not yet implemented")
+
+        return database.runQuery {
+            QueryDsl.insert(memberMeta).onDuplicateKeyUpdate().single(event)
+        } > 0
     }
 
     // 회원전체 불러오기.
