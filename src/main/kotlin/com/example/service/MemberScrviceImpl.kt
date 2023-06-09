@@ -18,7 +18,9 @@ class MemberScrviceImpl (
     override suspend fun save(event: MemberDto): Boolean {
 
         return database.runQuery {
-            QueryDsl.insert(memberMeta).onDuplicateKeyUpdate().single(event)
+            QueryDsl.insert(memberMeta)
+                .onDuplicateKeyUpdate()
+                .single(event)
         } > 0
     }
 
