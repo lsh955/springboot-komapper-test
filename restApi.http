@@ -32,7 +32,7 @@ Content-Type: application/json
 DELETE http://127.0.0.1:8080/member/delete
 Content-Type: application/json
 
- {
+{
     "memberIdx": 8,
     "memberName": "테스트_02",
     "memberAge": 30,
@@ -40,4 +40,4 @@ Content-Type: application/json
     "memberAddress": "광주광역 남구",
     "memberUpdate": "2023-06-10 14:12",
     "memberAdd": "2023-06-09 13:12"
-  }
+}
