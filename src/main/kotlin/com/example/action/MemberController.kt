@@ -15,7 +15,7 @@ class MemberController(
     @GetMapping("/list")
     suspend fun list() = memberScrvice.lists()
 
-    @PatchMapping("/update")
+    @PutMapping("/update")
     suspend fun update(@RequestBody memberDto: MemberDto) = memberScrvice.update(memberDto)
 
     @DeleteMapping("/delete")
