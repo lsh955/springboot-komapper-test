@@ -2,7 +2,7 @@ package com.example.service
 
 import com.example.dto.MemberDto
 
-interface MemberScrvice {
+interface MemberService {
     suspend fun save(event:MemberDto): Boolean
 
     suspend fun lists(offset: Int, limit: Int): List<MemberDto>

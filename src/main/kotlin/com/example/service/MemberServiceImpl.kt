@@ -8,9 +8,9 @@ import org.komapper.r2dbc.R2dbcDatabase
 import org.springframework.stereotype.Service
 
 @Service
-class MemberScrviceImpl (
+class MemberServiceImpl (
     private val database: R2dbcDatabase
-): MemberScrvice {
+): MemberService {
 
     private val memberMeta = Meta.member
 
