@@ -19,5 +19,5 @@ class MemberController(
     suspend fun update(@RequestBody memberDto: MemberDto) = memberScrvice.update(memberDto)
 
     @DeleteMapping("/delete")
-    suspend fun delete() = mapOf("mode" to "delete")
+    suspend fun delete(@RequestBody memberDto: MemberDto) = mapOf("state" to memberScrvice.delete(memberDto.memberIdx))
 }

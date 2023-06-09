@@ -49,7 +49,13 @@ class MemberScrviceImpl (
         } > 0
     }
 
-    override suspend fun delete(event: MemberDto): Boolean {
-        TODO("Not yet implemented")
+    // 회원정보 삭제.
+    override suspend fun delete(memberIdx: Long): Boolean {
+
+        return database.runQuery {
+            QueryDsl.delete(memberMeta).where {
+                memberMeta.memberIdx eq memberIdx
+            }
+        } > 0
     }
 }

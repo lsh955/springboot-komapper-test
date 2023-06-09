@@ -9,5 +9,5 @@ interface MemberScrvice {
 
     suspend fun update(event: MemberDto): Boolean
 
-    suspend fun delete(event: MemberDto): Boolean
+    suspend fun delete(memberIdx: Long): Boolean
 }
